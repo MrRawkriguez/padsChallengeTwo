@@ -1,0 +1,51 @@
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  border-radius: 8px;
+  border: solid rgb(93, 93, 93) 3px;
+  cursor: pointer;
+  opacity: .9;
+  transition: 300ms ease;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0) 0%,    /* White center */
+    rgb(96, 96, 96) 190%   /* Transparent edges */
+  );
+}
+
+button:hover {
+  opacity: 60%;
+  transform: color;
+}
+
+button.on {
+  opacity: 1;
+  border: solid 1px white;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 1) 0%,    /* White center */
+    rgba(255, 255, 255, 0) 100%   /* Transparent edges */
+  );
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8);
+  transition: 300ms ease;
+}
+
+button.on:hover {
+  opacity: .8;
+  transform: color;
+}
+
+.pad-container {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: repeat(2, 100px);
+  gap: 10px
+}
