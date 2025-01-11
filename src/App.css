@@ -1,6 +1,7 @@
 
 main {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -10,14 +11,15 @@ button {
   height: 100px;
   margin: 10px;
   border-radius: 8px;
-  border: solid rgb(93, 93, 93) 3px;
+  border: solid rgb(70, 70, 70) 3px;
   cursor: pointer;
   opacity: .9;
   transition: 300ms ease;
+  box-shadow: inset 0px 0px 15px rgba(0, 0, 0, 0.4);
   background: radial-gradient(
     circle,
-    rgba(255, 255, 255, 0) 0%,    /* White center */
-    rgb(96, 96, 96) 190%   /* Transparent edges */
+    rgba(255, 255, 255, 0) 60%,    /* White center */
+    rgb(53, 53, 53) 200%   /* Transparent edges */
   );
 }
 
@@ -28,7 +30,7 @@ button:hover {
 
 button.on {
   opacity: 1;
-  border: solid 1px white;
+  border: solid 3px white;
   background: radial-gradient(
     circle,
     rgba(255, 255, 255, 1) 0%,    /* White center */
@@ -48,4 +50,56 @@ button.on:hover {
   grid-template-columns: repeat(4, 100px);
   grid-template-rows: repeat(2, 100px);
   gap: 10px
+}
+
+.off {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(1, 210px);
+  grid-template-rows: repeat(1, 100px);
+
+}
+
+.all-off {
+  color: white;
+  background-color: red;
+  font-weight: bold;
+  width: 210px;
+  font-size: 1.3rem;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.9);
+}
+
+.all-on {
+  color: white;
+  background-color: green;
+  font-weight: bold;
+  width: 210px;
+  font-size: 1.3rem;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.9);
+}
+
+.all-off:active {
+  background: radial-gradient(
+    circle,
+    rgb(255, 255, 255) 0%,    /* White center */
+    rgba(255, 0, 0, 0.1) 140%   /* Transparent edges */
+  );
+  background-color: red;
+  border: solid 3px white;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8);
+  opacity: 1;
+}
+
+.all-on:active {
+
+  background: radial-gradient(
+    circle,
+    rgb(255, 255, 255) 0%,    /* White center */
+    rgba(255, 0, 0, 0.1) 140%   /* Transparent edges */
+  );
+  background-color: green;
+  border: solid 3px white;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8);
+  opacity: 1;
+
 }

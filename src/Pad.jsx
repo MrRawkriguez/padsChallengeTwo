@@ -2,17 +2,11 @@ import { useState } from "react"
 
 function Pad (props) {
 
-    const [on, setOn] = useState(props.on)
-
-    function toggle() {
-        setOn(prevOn => !prevOn)
-    }
-
     return(
     <button
         style={{backgroundColor: props.color}}
-        className={on ? "on" : ""}
-        onClick={toggle}
+        className={props.on ? "on" : ""}
+        onClick={() => props.toggle(props.id)}
     ></button>
     )
 }
